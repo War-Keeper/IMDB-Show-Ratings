@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+numpy
+pandas
+matplotlib
+plotly
+streamlit
+=======
+numpy
+pandas
+matplotlib
+plotly
+streamlit
+>>>>>>> 3bbfe91181ddb17555b29c802630bd6f3286ad7b
