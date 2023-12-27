@@ -44,12 +44,10 @@ if not tv_series_name.isspace():
         selected_shows_Id = selected_shows['tconst'].tolist()
         
         selected_shows_list = list(zip(selected_shows_list, selected_shows_Id))
-        
-selected_show = ''
 
 selected_show2 = st.selectbox('Show: ', selected_shows_list)
 
-st.text('Link to IMDB:  ' + 'https://www.imdb.com/title/' + selected_show2[1] +'/')
+
 
 def convert(df):
     df=pd.pivot_table(df,index=['episodeNumber'],columns='seasonNumber',values='averageRating',fill_value=np.nan)
@@ -57,6 +55,8 @@ def convert(df):
     return df
 
 if st.button('Show Chart'):
+    
+    st.text('Link to IMDB:  ' + 'https://www.imdb.com/title/' + selected_show2[1] +'/')
 
     episodes = basic_episode_ratings[basic_episode_ratings['parentTconst'] == selected_show2[1]].sort_values(by=['seasonNumber', 'episodeNumber'])
     episodes = episodes[['averageRating', 'seasonNumber', 'episodeNumber']]
