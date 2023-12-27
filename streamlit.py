@@ -70,7 +70,4 @@ if st.button('Show Chart'):
     st.plotly_chart(heatmap)
 
 
-st.text("""Information courtesy of
-IMDb
-(https://www.imdb.com).
-Used with permission.
+st.text("Information courtesy of IMDb (https://www.imdb.com). Used with permission")
