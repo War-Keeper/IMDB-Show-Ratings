@@ -17,8 +17,7 @@ st.title("IMDB Ratings for All Series")
 
 st.image("https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg")
 
-st.text('*Please note that the Show title is case sensitive and that you can use the IMDB id in the URL also.')
-
+st.text('*Please note that the Show title is case sensitive and that you can use the IMDB ID found in the show URL too.')
 
 tv_series_name = st.text_input('Show title', '')
 st.write('The current Show is:  ', tv_series_name)
