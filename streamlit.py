@@ -49,6 +49,8 @@ selected_show = ''
 
 selected_show2 = st.selectbox('Show: ', selected_shows_list)
 
+st.text('Link to IMDB:  ' + 'https://www.imdb.com/title/' + 'selected_show2[1]' +'/')
+
 def convert(df):
     df=pd.pivot_table(df,index=['episodeNumber'],columns='seasonNumber',values='averageRating',fill_value=np.nan)
 
