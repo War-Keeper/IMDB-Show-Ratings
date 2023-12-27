@@ -17,7 +17,7 @@ st.title("IMDB Ratings for All Series")
 
 st.image("https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg")
 
-st.text('*Please note that the Series name is case sensitive')
+st.text('*Please note that the Show title is case sensitive and that you can use the IMDB id in the URL also.')
 
 
 tv_series_name = st.text_input('Show title', '')
@@ -55,7 +55,7 @@ def convert(df):
     return df
 
 if st.button('Show Chart'):
-    
+
     st.text('Link to IMDB:  ' + 'https://www.imdb.com/title/' + selected_show2[1] +'/')
 
     episodes = basic_episode_ratings[basic_episode_ratings['parentTconst'] == selected_show2[1]].sort_values(by=['seasonNumber', 'episodeNumber'])
